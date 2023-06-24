@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="./manifest/manifest.webmanifest">
+    <link rel="stylesheet" href="style.css">
+    <title>APPLE</title>
+</head>
+<body>
+    <div class="contanier">
+        <header>
+            <a href="#"><img src="./image/logo.png" class="logo" alt=""></a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="text">
+                <h2>iphone 13 pro max</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam inventore quia, recusandae sunt accusamus dicta sint praesentium nulla iusto, eos laudantium cumque minus, esse corrupti! Harum dignissimos vitae quia quibusdam.</p>
+                <a href="/index.html" target="_blank">All Products</a>
+            </div>
+            <div class="image">
+                <img class="img" src="./image/0.png" alt="">
+            </div>
+        </div>
+        <div class="icons">
+            <img onclick="phones(this.src); colors('#000')" src="/image/0.png" alt="">
+            <img onclick="phones(this.src); colors('#247ec8')" src="/image/1.png" alt="">
+            <img onclick="phones(this.src); colors('#1e1e1e')" src="/image/2.png" alt="">
+            <img onclick="phones(this.src); colors('#c79b53')" src="/image/3.png" alt="">
+            <img onclick="phones(this.src); colors('#c82525')" src="/image/4.png" alt="">
+        </div>
+    </div>
+    <script src="iphone.js"></script>
+    <script>
+        // 1-register
+        if('serviceWorker' in navigator){
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('server.js').then(regiterObj => {
+                    console.log(regiterObj)
+                }).catch(err =>{
+                    console.log(err)
+                })
+            })
+
+        }
+    </script>
+</body>
+</html>
